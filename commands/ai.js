@@ -10,21 +10,21 @@ module.exports = {
         const uid = event.senderID;
 
         if (!input) {
-            return api.sendMessage('Please enter a prompt.', event.threadID, event.messageID);
+            return api.sendMessage('Hi Please enter a prompt or use help to see all commands.', event.threadID, event.messageID);
         }
 
-        api.sendMessage('Processing your request...', event.threadID, event.messageID);
+        api.sendMessage('🔍|Processing your request...', event.threadID, event.messageID);
 
         try {
             const response = await axios.get(`${global.NashBot.END}new/gpt-3_5-turbo?prompt=${encodeURIComponent(input)}`);
             const result = response.data.result.reply;
 
             if (!result) {
-                throw new Error('No valid response received from the API.');
+                throw new Error('🚫No valid response received from the API Please use other commands type help to see all commands .');
             }
 
             api.sendMessage(
-                `🤖 AI Response\n━━━━━━━━━━━━━━━━━━━\n${result}`,
+                `🅰️ℹ AI Response\n━━━━━━━━━━━━━━━━━━━\n${result}`,
                 event.threadID,
                 event.messageID
             );
