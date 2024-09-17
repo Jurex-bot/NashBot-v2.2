@@ -29,7 +29,7 @@ module.exports = {
                 event.messageID
             );
         } catch (error) {
-            api.sendMessage(`An error occurred: ${error.message}`, event.threadID, event.messageID);
+            api.sendMessage(`An error occurred while processing please use another commands for example: Ai2 or use help see all commands: ${error.message}`, event.threadID, event.messageID);
         }
     },
 };
