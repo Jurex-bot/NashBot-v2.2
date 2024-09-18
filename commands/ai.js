@@ -10,17 +10,17 @@ module.exports = {
         const uid = event.senderID;
 
         if (!input) {
-            return api.sendMessage('Hi Please enter a prompt or use help to see all commands.', event.threadID, event.messageID);
+            return api.sendMessage('Hi po kapatid Please enter a prompt or use help to see all commands Salamat po sa Dios sa Pagkakataon na makapag lingkod sa inyo.', event.threadID, event.messageID);
         }
 
-        api.sendMessage('🔍|Processing your request...', event.threadID, event.messageID);
+        api.sendMessage('🔍|Sandali lang po kapatid hinanap pa...', event.threadID, event.messageID);
 
         try {
             const response = await axios.get(`${global.NashBot.END}new/gpt-3_5-turbo?prompt=${encodeURIComponent(input)}`);
             const result = response.data.result.reply;
 
             if (!result) {
-                throw new Error('🚫No valid response received from the API Please use other commands type help to see all commands .');
+                throw new Error('🚫No valid response received from the API Please use other commands type help to see all commands or please contact our brother and sister admin this is our admin list 🧑‍💼Brother Jureden 👨‍💼Brother Johnny 🕵‍♂️Brother Eric 👨‍🔧Brother Jurex 🧑‍💼Brother Jhanmark .');
             }
 
             api.sendMessage(
