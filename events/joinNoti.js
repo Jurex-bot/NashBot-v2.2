@@ -22,8 +22,8 @@ module.exports = {
 
           const welcomeMessage = `
             📌 𝗝𝗼𝗶𝗻 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻 📌
-            › ${prefix} connected successfully!
-            › Use ${prefix}help to see available commands!
+            › ${prefix} connected successfully Salamat po sa Dios!
+            › Use ${prefix}help para makita lahat ng command kapatid!
           `;
 
           api.sendMessage(welcomeMessage, threadID);
@@ -34,7 +34,7 @@ module.exports = {
           const currentMembersCount = threadInfo.participantIDs.length;
           const participantsList = addedParticipants.map((i) => i.fullName).join(", ");
           const welcomeMessage = `
-            Hello ${participantsList} You're the ${currentMembersCount} member of 🤖${threadInfo.name}🤖\n\n『 Enjoy your stay and make lots of friends 』
+            Hello ${participantsList} You're the ${currentMembersCount} member of 🤖${threadInfo.name}🤖\n\n『🎉 Mag Enjoy po kayo kapatid sa pag stay and make lots of friends salamat po sa Dios💖 』
           `;
 
           const welcomeFolder = path.join(__dirname, 'welcome');
