@@ -10,10 +10,10 @@ module.exports = {
         const uid = event.senderID;
 
         if (!input) {
-            return api.sendMessage('Hi po kapatid Please enter a prompt or use help to see all commands Salamat po sa Dios sa Pagkakataon na makapag lingkod sa inyo.', event.threadID, event.messageID);
+            return api.sendMessage('Hi po kapatid Please enter a prompt or use help to see all commands Salamat po sa Dios sa Pagkakataon na makapag lingkod sa inyo from my developer: Brad Jurex Aso.', event.threadID, event.messageID);
         }
 
-        api.sendMessage('🔍|Sandali lang po kapatid hinanap pa...', event.threadID, event.messageID);
+        api.sendMessage('🔍|Sandali lang po hinahanap pa...', event.threadID, event.messageID);
 
         try {
             const response = await axios.get(`${global.NashBot.END}new/gpt-3_5-turbo?prompt=${encodeURIComponent(input)}`);
@@ -24,7 +24,7 @@ module.exports = {
             }
 
             api.sendMessage(
-                `[LIK€•★•🅡🅔🅧🅑🅞🅣𒅒 Response\n━━━━━━━━━━━━━━━━━━━\n${result}`,
+                `[LIK€•★•🅡🅔🅧🅑🅞🅣𒅒 Response\n━━━━━━━━━━━━━━━━━━━\n${result} ————————————————————————————[⚠️important notice this bot is not for sale`,
                 event.threadID,
                 event.messageID
             );
