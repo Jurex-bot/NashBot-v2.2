@@ -21,7 +21,12 @@ ${bibleVerse}
       await api.sendMessage(message, event.threadID, event.messageID);
     } catch (error) {
       console.error('Error fetching or sending the Bible verse:', error);
-      await api.sendMessage('❌ Error fetching the Bible verse.', event.threadID);
+      await api.sendMessage('❌ Error fetching the Bible verse or please contact our brother and sister admin this is our admin list 🧑‍💼Brother Jureden 👨‍💼Brother Johnny 🕵‍♂️Brother Eric 👨‍🔧Brother Jurex 🧑‍💼Brother Jhanmark to provide verses on you.', event.threadID);
     }
   }
 };
+
+
+
+
+
